@@ -19,7 +19,7 @@ spec:
           type: string
           description: Unique name of the component
         title:
-          title: Value
+          title: Title
           type: string
           description: Help others understand what this website is for.
         
@@ -44,7 +44,7 @@ spec:
           - .github/workflows/*
         values:
           component_id: ${{ parameters.component_id }}
-          description: ${{ parameters.description }}
+          title: ${{ parameters.title }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           backstage_namespace: ${{ parameters.backstage_namespace }}
 
