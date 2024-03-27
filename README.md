@@ -1,4 +1,4 @@
 # backstage-template-testing
 
 ## ${{ values.title }}
-### ${{ values.name }}
+### ${{ values.component_id }}
