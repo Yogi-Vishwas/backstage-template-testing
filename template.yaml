@@ -54,6 +54,10 @@ spec:
         allowedHosts: ["github.com"]
         description: This is ${{ parameters.component_id }}
         repoUrl: ${{ parameters.repoUrl }}
+        collaborators:
+          - user: vishwas-yogi
+            access: admin
+
 
 
   output:
