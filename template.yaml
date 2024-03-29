@@ -38,7 +38,7 @@ spec:
         owner:
           title: Owner of the Repo
           type: string
-          ui:field: EntityPicker
+          ui:field: OwnerPicker
           ui:options:
           catalogFilter:
             - kind: Group
