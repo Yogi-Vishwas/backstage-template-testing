@@ -34,6 +34,15 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
+
+        owner:
+          title: Owner of the Repo
+          type: string
+          ui:field: EntityPicker
+          ui:options:
+          catalogFilter:
+            - kind: Group
+              spec.type: team
   steps:
     - id: template
       name: Fetch Skeleton + Template
