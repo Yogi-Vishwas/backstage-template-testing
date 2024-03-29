@@ -40,9 +40,9 @@ spec:
           type: string
           ui:field: OwnerPicker
           ui:options:
-          catalogFilter:
-            - kind: Group
-              spec.type: team
+            allowedKinds:
+              - Group
+            
   steps:
     - id: template
       name: Fetch Skeleton + Template
