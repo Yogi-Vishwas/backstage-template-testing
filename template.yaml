@@ -13,6 +13,7 @@ spec:
     - title: Provide some simple information
       required:
         - component_id
+        - admin 
       properties:
         component_id:
           title: Name
@@ -22,6 +23,10 @@ spec:
           title: Title
           type: string
           description: Help others understand what this website is for.
+        admin:
+          title: Admin of the Repo
+          type: string
+          description: Github Username 
         
     - title: Choose a location
       required:
@@ -34,14 +39,6 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
-
-        owner:
-          title: Owner of the Repo
-          type: string
-          ui:field: OwnerPicker
-          ui:options:
-            allowedKinds:
-              - Group
             
   steps:
     - id: template
@@ -64,9 +61,8 @@ spec:
         description: This is ${{ parameters.component_id }}
         repoUrl: ${{ parameters.repoUrl }}
         collaborators:
-          - user: vishwas-yogi
+          - user: ${{ parameters.admin }}
             access: admin
-
 
 
   output:
