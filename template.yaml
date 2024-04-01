@@ -46,8 +46,9 @@ spec:
       action: fetch:template
       input:
         url: https://github.com/sourcefuse/react-boilerplate-ts-ui/tree/main
-        copyWithoutRender:
+        copyWithoutTemplating:
           - .github/workflows/*
+          - cdk/*
         values:
           component_id: ${{ parameters.component_id }}
           title: ${{ parameters.title }}
