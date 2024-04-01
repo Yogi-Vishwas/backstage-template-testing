@@ -43,16 +43,10 @@ spec:
   steps:
     - id: template
       name: Fetch Skeleton + Template
-      action: fetch:template
+      action: fetch:plain
       input:
         url: https://github.com/sourcefuse/react-boilerplate-ts-ui/tree/main
-        copyWithoutTemplating:
-          - .github/workflows/*
-          - cdk/*
-        values:
-          component_id: ${{ parameters.component_id }}
-          title: ${{ parameters.title }}
-          destination: ${{ parameters.repoUrl | parseRepoUrl }}
+        
 
     - id: publish
       name: Publish
